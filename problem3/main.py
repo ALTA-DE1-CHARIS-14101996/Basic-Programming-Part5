@@ -1,6 +1,12 @@
+#Fungsi remove duplicate dengan Tc = O(n^2) dan Sc = O(n)
 def join_array_remove_duplicate(arrayA, arrayB):
     # your code here
-    return []
+    combine = arrayA + arrayB
+    compare = []
+    for i in combine:
+        if i not in compare:
+            compare.append(i)
+    return compare
 
 if __name__ == '__main__':
     # Test cases

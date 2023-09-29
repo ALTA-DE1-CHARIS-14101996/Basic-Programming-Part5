@@ -1,5 +1,19 @@
+#Fungsi muncul sekali dengan Tc = O(n) dan Sc = O(n)
 def muncul_sekali(angka):
-    return []
+    angka_set = set()
+    list = []
+
+    for digit in angka:
+        digit_int = int(digit)  # Mengonversi karakter menjadi integer
+        if digit_int not in angka_set:
+            angka_set.add(digit_int)
+            list.append(digit_int)
+        else:
+            if digit_int in list:
+                list.remove(digit_int)
+
+    return list
+            
 
 if __name__ == '__main__':
     print(muncul_sekali("1234123")) # [4]
